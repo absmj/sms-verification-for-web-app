@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SMS Validation for testing with Firebase</title>
+	<link rel="stylesheet" type="text/css" href="/assets/bootstrap/css/bootstrap.min.css">
+
+	<style type="text/css">
+		body, html {
+			padding: 0;
+			margin: 0;
+			background-color: rgba(0,0,0,.15);
+			min-width: 100vw;
+			min-height: 100vh;
+			overflow: hidden;
+		}
+
+		[v-cloak] > * { display:none }
+		[v-cloak]::before { content: "Loading…" }
+	</style>
+</head>
+
+<body>
+	<div id="app" class="row justify-content-center align-items-center p-4" style="min-height: inherit;"  v-cloak>
+		<div v-if="loaded" class="card col-11 col-md-4 col-lg-3">
+			<div v-if="!verify" class="card-body">
+				<div class="form-group">
+					<input id="phoneNumber" type="phone" name="phonenumber" class="form-control" placeholder="Please, enter the phone number">
+					<div class="pt-2 d-flex justify-content-center" id="recaptcha-container"></div>
+				</div>
+				<button class="btn btn-block btn-warning" @click="phoneAuth">Send SMS!</button>
+			</div>
+
+			<div v-else-if="loaded" class="card-body">
+				<div class="form-group">
+					<input id="verificationCode" type="phone" name="code" class="form-control" placeholder="Please, enter the vertification number">
+				</div>
+				<button class="btn btn-block btn-success" @click="codeverify">Validate Phone Number</button>
+			</div>
+		</div>
+	</div>
+
+
+</body>
+<script src="/lib/vue.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase.js"></script>
+<script type="text/javascript" src="/js/app.js"></script>
+</html>

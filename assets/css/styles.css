@@ -1,0 +1,53 @@
+* {
+  --smoky-black: #0f0f0f;
+  --jet: #2d2e2e;
+  --seashell: #fef5ef;
+  --cgblue: #247ba0;
+  --dist: 1.95em;
+}
+
+#logo {
+  width: 17vw;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.navbar {
+  padding: 1.95em;
+  background-color: var(--cgblue);
+  box-shadow: 0px 0px 5px 0px #888888;
+  margin-bottom: 1.95em;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--smoky-black);
+}
+
+.text-input {
+  min-height: 8em;
+  /*max-height: 10em;*/
+  border-radius: 1.95px;
+  resize: none;
+  background-color: #2d2d2e;
+  color: #f2f5f8;
+}
+
+#settings {
+  color: var(--cgblue);
+  font-size: 1.15em;
+}
+
+.size {
+  width: 4em;
+}
+
+.size > label > * {
+  background-color: #2d2d2e;
+  color: #f2f5f8;
+}
+
+.btn.btn-primary.btn-block {
+  background-color: var(--cgblue);
+}
+
